@@ -1,16 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import HomePage from '../pages/Home';
-import AboutPage from '../pages/About';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AuthRoutes } from '../modules/auth/routes/AuthRoutes';
+
 
 function AppRouter() {
   return (
     <Router>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/about" component={AboutPage} />
-        <Route component={NotFoundPage} />
-      </Switch>
+      <Routes>
+        {/* Login y Registro */}
+        <Route path="/auth/*" element={ <AuthRoutes /> } />
+      </Routes>
     </Router>
   );
 }
