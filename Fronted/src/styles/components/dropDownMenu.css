@@ -1,0 +1,14 @@
+.dropdown-menu {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 70px;
+    z-index: 9;
+    justify-content: space-evenly !important;
+    background-color: rgb(63, 62, 67);
+}
+
+.iconContainer img{
+    margin: 15px 0;
+}
