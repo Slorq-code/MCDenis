@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/generic.css'
 import '../styles/components/dropDownMenu.css'
+
 import userWhiteSvg from '../assets/icons/userWhite.svg'; // Importar la imagen SVG
 import homeWhiteSvg from '../assets/icons/homeWhite.svg'; // Importar la imagen SVG
 import numbersWhiteSvg from '../assets/icons/numbersWhite.svg'; // Importar la imagen SVG

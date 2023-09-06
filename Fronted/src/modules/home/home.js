@@ -8,8 +8,8 @@ import '../../styles/generic.css'
 function Home() {
   return (
     <div className="dashBoard flexColumn" >
-      <DropdownMenu />
       <Header />
+      <DropdownMenu />
       <Grid />
     </div>
   );

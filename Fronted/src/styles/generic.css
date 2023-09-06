@@ -23,8 +23,13 @@
 .icon {
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
-.ico:hover {
+.icon:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease; 
+}
+
+.marginCero {
+    margin: 0 !important;
 }
