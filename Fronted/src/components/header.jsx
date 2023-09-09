@@ -1,12 +1,13 @@
 import React from 'react';
 import '../styles/generic.css'
 import '../styles/components/header.css'
+import tituloImage from '../assets/image/título.png'
 
 
 function Header() {
   return (
     <header className='header flexColumn' >
-      <h1 className='marginCero' >MCD PANEL</h1>
+      <img className='marginCero title' src={tituloImage} alt='title' />
       <div className='Container flexRow' >
         <nav className='Container' >
         <ul class="containerMenu marginCero">

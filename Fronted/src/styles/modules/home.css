@@ -3,4 +3,7 @@
     height: 100vh;
     position: relative;
     z-index: 7;
+    background-image: url('../../assets/image/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }

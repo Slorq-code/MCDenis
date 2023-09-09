@@ -1,11 +1,16 @@
 import React from 'react';
 import {Button, Grid, TextField} from '@mui/material';
 import {AuthLayout} from '../layout/AuthLayout';
-import {Formik, Form, ErrorMessage} from 'formik'; // Importa Formik y Field
+import {Formik, Form, ErrorMessage} from 'formik';
 import * as Yup from 'yup';
+import { useNavigate } from 'react-router-dom';
+
+
 
 export const LoginPage = () => {
-  // Define el esquema de validación con Yup
+
+  const navigate = useNavigate();
+
   const validationSchema = Yup.object().shape({
     email: Yup.string()
       .email('Correo electrónico inválido')
@@ -14,7 +19,7 @@ export const LoginPage = () => {
   });
 
   const handleSubmit = (values, {setSubmitting}) => {
-    // Aquí puedes manejar la lógica de envío del formulario
+    navigate("/");
     console.log(values);
     setSubmitting(false);
   };
@@ -24,9 +29,8 @@ export const LoginPage = () => {
       <Formik
         initialValues={{email: '', password: ''}}
         onSubmit={handleSubmit}
-        validationSchema={validationSchema}
       >
-        {({isSubmitting}) => (
+        {({isSubmitting, errors, touched}) => (
           <Form>
             <Grid container>
               <Grid item xs={12} sx={{mt: 2}}>
@@ -37,7 +41,11 @@ export const LoginPage = () => {
                   placeholder='correo@google.com'
                   fullWidth
                 />
-                <ErrorMessage name='email' component='div' className='error' />
+                {errors.email && touched.email && (
+                  <div className='error' style={{color: 'red'}}>
+                    {errors.email}
+                  </div>
+                )}
               </Grid>
 
               <Grid item xs={12} sx={{mt: 2}}>
@@ -48,7 +56,11 @@ export const LoginPage = () => {
                   placeholder='Contraseña'
                   fullWidth
                 />
-                <ErrorMessage name='password' component='div' className='error' />
+                {errors.password && touched.password && (
+                  <div className='error' style={{color: 'red'}}>
+                    {errors.password}
+                  </div>
+                )}
               </Grid>
 
               <Grid container spacing={2} sx={{mb: 2, mt: 1}}>

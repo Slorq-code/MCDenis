@@ -33,3 +33,20 @@
 .marginCero {
     margin: 0 !important;
 }
+
+
+/* .cardAnimation {
+    scroll-timeline-name: --revealing-image;
+    animation-name: show;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+} */

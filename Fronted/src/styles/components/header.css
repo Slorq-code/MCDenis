@@ -28,3 +28,7 @@
 .headerOption:hover {
     border-bottom: 4px solid rgb(77, 77, 77);
 }
+
+.title {
+    width: 200px;
+}
