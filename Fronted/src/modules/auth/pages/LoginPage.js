@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 
-export const LoginPage = () => {
+function LoginPage() {
 
   const navigate = useNavigate();
 
@@ -80,3 +80,5 @@ export const LoginPage = () => {
     </AuthLayout>
   );
 };
+
+export default LoginPage

@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import HomePage from '../modules/home/home';
 // import { AuthRoutes } from '../modules/auth/routes/AuthRoutes';
-import { Home } from '../modules/home/home';
-import { LoginPage } from '../modules/auth/pages';
+import  Home from '../modules/home/home';
+import LoginPage from '../modules/auth/pages/LoginPage';
 
 
 function AppRouter() {
